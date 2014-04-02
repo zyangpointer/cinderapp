@@ -21,5 +21,6 @@ void Particle::update()
 }
 
 void Particle::draw(){
-	ci::gl::drawSolidCircle(position, radius);
+	ci::gl::drawSolidRect(ci::Rectf(position.x - radius, position.y - radius,
+		position.x + radius, position.y + radius));
 }
